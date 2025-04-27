@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ffe6f0, #ffc2d1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+h1 {
+  color: #d6336c;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#tap-text {
+  position: absolute;
+  bottom: 20px;
+  color: #aa336a;
+  font-size: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+#hug-gif {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  animation: floatGif 3s ease-in-out infinite alternate;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: floatUp 8s linear forwards;
+  opacity: 0.8;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ed1132;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  left: -15px;
+  top: 0;
+}
+
+@keyframes floatGif {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
