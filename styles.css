@@ -34,6 +34,36 @@ h1 {
   animation: floatGif 3s ease-in-out infinite alternate;
 }
 
+/* Media Query for mobile devices */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #tap-text {
+    font-size: 1.2rem;
+  }
+
+  #hug-gif {
+    width: 150px;
+  }
+}
+
+/* Media Query for tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  #tap-text {
+    font-size: 1.4rem;
+  }
+
+  #hug-gif {
+    width: 180px;
+  }
+}
+
 .heart {
   position: absolute;
   width: 30px;
@@ -68,7 +98,6 @@ h1 {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-10px); }
 }
-
 
 @keyframes floatUp {
   0% {
